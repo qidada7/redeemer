@@ -1,0 +1,176 @@
+
+
+#stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.admv-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.visualizer {
+  width: 100%;
+  height: 100%;
+  background-color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.renderer {
+  background-color: #000;
+  width: 50%;
+  height: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+#r0:focus {
+  border: 3px solid #03a9f4;
+}
+#r0 {
+  background: #9e9e9e;
+  background: -webkit-linear-gradient(
+    #9e9e9e,
+    #607d8b
+  ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#9e9e9e, #607d8b); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(
+    #9e9e9e,
+    #607d8b
+  ); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#9e9e9e, #607d8b); /* Standard syntax */
+  border-top: 3px solid #03a9f4;
+  position: relative;
+}
+#r0:before{
+  content: "3D";
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    top:25px;
+    left: 25px;
+}
+#r1:focus {
+  border: 3px solid #f44336;
+}
+#r1 {
+  border-top: 3px solid #f44336;
+  position: relative;
+}
+
+#r2:focus {
+  border: 3px solid #ffeb3b;
+}
+#r2 {
+  border-top: 3px solid #ffeb3b;
+  position: relative;
+}
+
+#r3:focus {
+  border: 3px solid #8bc34a;
+}
+#r3 {
+  border-top: 3px solid #8bc34a;
+  position: relative;
+}
+#r1:before{
+  content: "T";
+   font-size: 25px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+#r2:before{
+  content: "S";
+   font-size: 25px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+#r3:before{
+  content: "C";
+   font-size: 25px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.main-screen {
+  width: 70%;
+  height: 100%;
+}
+
+.side-screen {
+  width: 30%;
+  height: calc(100% /3);
+}
+
+#my-gui-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  width: 245px;
+}
+
+#my-lut-container {
+  bottom: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  color: #f9f9f9;
+  display: flex;
+}
+
+#my-lut-container > #my-lut-canvases {
+  position: relative;
+}
+
+#my-lut-min {
+  margin-right: 10px;
+}
+
+#my-lut-max {
+  margin-left: 10px;
+}
+
+#my-lut-container > #my-lut-canvases > :first-child {
+  background: repeating-linear-gradient(
+    -45deg,
+    #353535,
+    #353535 5px,
+    black 5px,
+    black 10px
+  );
+}
+
+#my-lut-container > #my-lut-canvases > :nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

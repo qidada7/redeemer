@@ -1,0 +1,25 @@
+node_modules
+.DS_Store
+Thumbs.db
+*.log
+
+/dist
+/release
+/temp
+
+# ignore everything in 'app' folder what had been generated from 'src' folder
+/app/app.js
+/app/background.js
+/app/**/*.map
+/app/data/**
+amdv-plain.iml
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+/app/*.svg
+/app/*.eot
+/app/*.ttf
+*.log
+
+.idea/
