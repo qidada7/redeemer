@@ -1,0 +1,33 @@
+directories:
+  output: release
+  buildResources: resources
+artifactName: '${name}-${version}-${os}-${arch}.${ext}'
+productName: 三维重建图像处理
+appId: com.datamintech.amdv
+files:
+  - filter:
+      - app/**/*
+      - '!app/data/'
+      - node_modules/
+      - package.json
+dmg:
+  contents:
+    - x: 130
+      'y': 220
+    - x: 410
+      'y': 220
+      type: link
+      path: /Applications
+win:
+  target:
+    - nsis
+    - msi
+linux:
+  target:
+    - deb
+    - rpm
+    - snap
+    - AppImage
+  category: Development
+publish: null
+electronVersion: 3.0.10
